@@ -1,10 +1,12 @@
 # C - Pointeurs, tableaux et chaînes de caractères
 
-Ce projet contient mon projet **C - Pointeurs, tableaux et chaînes de caractères**, réalisé dans le cadre du programme Holberton School.
+Ce dossier contient mes projets **C - Pointeurs, tableaux et chaînes de caractères** et **C - Autres pointeurs, tableaux et chaînes de caractères**, réalisés dans le cadre du programme Holberton School.
 
-Il couvre les pointeurs et leur utilisation, les adresses mémoire, le déréférencement avec l'opérateur `*`, l'opérateur d'adresse `&`, les tableaux et leur parcours, les chaînes de caractères terminées par `'\0'`, ainsi que la différence entre un pointeur et un tableau. L'affichage se fait uniquement avec `_putchar`, sauf pour la fonction `print_array`, qui utilise `printf`.
+Ils couvrent les pointeurs et leur utilisation, les adresses mémoire, le déréférencement avec l'opérateur `*`, l'opérateur d'adresse `&`, les tableaux et leur parcours, les chaînes de caractères terminées par `'\0'`, ainsi que la différence entre un pointeur et un tableau. Le second projet approfondit ces notions en réécrivant des fonctions de la bibliothèque standard (`strcat`, `strncat`, `strncpy`, `strcmp`) et en modifiant directement en mémoire le contenu de tableaux et de chaînes. L'affichage se fait uniquement avec `_putchar`, sauf pour la fonction `print_array`, qui utilise `printf`.
 
 ## Fichiers
+
+### `pointers_arrays_strings_1` : C - Pointeurs, tableaux et chaînes de caractères
 
 - `main.h` : fichier d'en-tête contenant les prototypes de toutes les fonctions du projet, ainsi que celui de `_putchar`.
 - `0-reset_to_98.c` : fonction `reset_to_98` qui reçoit un pointeur vers un `int` et met la valeur pointée à `98`.
@@ -17,6 +19,19 @@ Il couvre les pointeurs et leur utilisation, les adresses mémoire, le déréfé
 - `7-puts_half.c` : fonction `puts_half` qui affiche la seconde moitié d'une chaîne de caractères, suivie d'un retour à la ligne. Si la longueur est impaire, elle affiche les `(longueur - 1) / 2` derniers caractères.
 - `8-print_array.c` : fonction `print_array` qui affiche les `n` premiers éléments d'un tableau d'entiers, séparés par `, `, suivis d'un retour à la ligne.
 - `9-strcpy.c` : fonction `_strcpy` qui copie la chaîne pointée par `src`, y compris le `'\0'` final, dans le tampon pointé par `dest`, et renvoie `dest`.
+- `100-atoi.c` : fonction `_atoi` qui convertit une chaîne de caractères en entier, en tenant compte de tous les signes `-` et `+` qui précèdent le nombre.
+
+### `pointers_arrays_strings_2` : C - Autres pointeurs, tableaux et chaînes de caractères
+
+- `main.h` : fichier d'en-tête contenant les prototypes de toutes les fonctions du projet, ainsi que celui de `_putchar`.
+- `0-strcat.c` : fonction `_strcat` qui ajoute la chaîne `src` à la fin de la chaîne `dest`, en écrasant le `'\0'` final de `dest`, et renvoie `dest`.
+- `1-strncat.c` : fonction `_strncat` qui ajoute au plus `n` octets de la chaîne `src` à la fin de la chaîne `dest`, puis un `'\0'` final, et renvoie `dest`.
+- `2-strncpy.c` : fonction `_strncpy` qui copie au plus `n` octets de la chaîne `src` dans `dest`, complète avec des `'\0'` si `src` est plus courte que `n`, et renvoie `dest`, comme `strncpy`.
+- `3-strcmp.c` : fonction `_strcmp` qui compare deux chaînes de caractères et renvoie la différence entre les deux premiers caractères qui diffèrent, ou `0` si elles sont identiques.
+- `4-rev_array.c` : fonction `reverse_array` qui inverse le contenu d'un tableau de `n` entiers directement en mémoire.
+- `5-string_toupper.c` : fonction `string_toupper` qui transforme toutes les lettres minuscules d'une chaîne en majuscules et renvoie la chaîne.
+- `6-cap_string.c` : fonction `cap_string` qui met en majuscule la première lettre de chaque mot d'une chaîne. Les séparateurs de mots sont l'espace, la tabulation, le retour à la ligne et les caractères `,` `;` `.` `!` `?` `"` `(` `)` `{` `}`.
+- `7-leet.c` : fonction `leet` qui encode une chaîne en 1337 en remplaçant `a` et `A` par `4`, `e` et `E` par `3`, `o` et `O` par `0`, `t` et `T` par `7`, `l` et `L` par `1`, avec un seul `if` et deux boucles.
 
 ## Environnement
 
