@@ -16,4 +16,4 @@ Il couvre le débogage de programmes C qui compilent sans erreur mais produisent
 - Compilateur : `gcc` avec les options `-Wall -Werror -Wextra -pedantic -std=gnu89`
 - Outil de débogage : [Python Tutor - Visualiseur C](https://pythontutor.com/c.html)
 - Style de code : Betty
-- Éditeurs : `vi`, `vim`, `emacs`
+- Éditeurs : `vi`, `vim`, `VS Code`

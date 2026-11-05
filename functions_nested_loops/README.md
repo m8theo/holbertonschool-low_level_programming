@@ -25,4 +25,4 @@ Il couvre l'écriture et l'utilisation de fonctions en C, la différence entre l
 - Système : Ubuntu 20.04 LTS
 - Compilateur : `gcc` avec les options `-Wall -Werror -Wextra -pedantic -std=gnu89`
 - Style de code : Betty
-- Éditeurs : `vi`, `vim`, `emacs`
+- Éditeurs : `vi`, `vim`, `VS Code`

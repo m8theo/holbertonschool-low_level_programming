@@ -19,4 +19,4 @@ Il couvre les étapes de la compilation d'un programme C avec `gcc` (préprocess
 - Système : Ubuntu 20.04 LTS
 - Compilateur : `gcc` avec les options `-Wall -Werror -Wextra -pedantic -std=gnu89`
 - Style de code : Betty
-- Éditeurs : `vi`, `vim`, `emacs`
+- Éditeurs : `vi`, `vim`, `VS Code`

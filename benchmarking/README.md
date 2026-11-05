@@ -18,7 +18,7 @@ Il couvre la mesure du temps d'exécution d'un programme C avec `clock()` et `CL
 
 ## Environnement
 
-- Machine : Apple M1
-- Compilateur : `gcc` avec les options `-Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-long-long`
-- Bibliothèques : uniquement la bibliothèque standard C
-- Mesure du temps : `clock()` et `CLOCKS_PER_SEC` (`<time.h>`)
+- Système : Ubuntu 20.04 LTS
+- Compilateur : `gcc` avec les options `-Wall -Werror -Wextra -pedantic -std=gnu89`
+- Style de code : Betty
+- Éditeurs : `vi`, `vim`, `VS Code`
