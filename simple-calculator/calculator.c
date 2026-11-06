@@ -5,12 +5,12 @@
  */
 void print_menu(void)
 {
-    printf("1) Addition\n");
-    printf("2) Soustraction\n");
-    printf("3) Multiplication\n");
-    printf("4) Division\n");
-    printf("0) Quitter\n");
-    printf("Choisissez:\n");
+    printf("1) Add\n");
+    printf("2) Subtract\n");
+    printf("3) Multiply\n");
+    printf("4) Divide\n");
+    printf("0) Quit\n");
+    printf("Choice: ");
 }
 
 /**
@@ -22,10 +22,10 @@ void print_menu(void)
  */
 int read_operands(double *a, double *b)
 {
-    printf("Entrez le premier nombre: ");
+    printf("A: ");
     if (scanf("%lf", a) != 1)
         return (0);
-    printf("Entrez le deuxième nombre: ");
+    printf("B: ");
     if (scanf("%lf", b) != 1)
         return (0);
     return (1);
@@ -42,19 +42,19 @@ void compute(int choice, double a, double b)
     switch (choice)
     {
         case 1:
-         printf("Résultat: %g\n", a + b);
+         printf("Result: %g\n", a + b);
           break;
         case 2:
-         printf("Résultat: %g\n", a - b);
+         printf("Result: %g\n", a - b);
           break;
         case 3:
-         printf("Résultat: %g\n", a * b);
+         printf("Result: %g\n", a * b);
           break;
         case 4:
          if (b == 0)
-         printf("Erreur: Division par zéro!\n");
+         printf("Error: Division by zero!\n");
         else
-         printf("Résultat: %g\n", a / b);
+         printf("Result: %g\n", a / b);
           break;
         default:
           break;
@@ -71,7 +71,7 @@ int main(void)
     int choice;
     double a, b;
 
-    printf("=== Menu de la Calculatrice ===\n");
+    printf("Simple Calculator\n");
     while (1)
     {
         print_menu();
@@ -81,13 +81,13 @@ int main(void)
           break;
         if (choice < 0 || choice > 4)
         {
-            printf("Choix invalide. Veuillez réessayer.\n");
+            printf("Invalid choice\n");
             continue;
         }
         if (!read_operands(&a, &b))
             return (1);
         compute(choice, a, b);
     }
-    printf("Au revoir!\n");
+    printf("Bye!\n");
     return 0;
 }
