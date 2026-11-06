@@ -10,7 +10,7 @@ void print_menu(void)
     printf("3) Multiplication\n");
     printf("4) Division\n");
     printf("0) Quitter\n");
-    printf("Choisissez: ");
+    printf("Choisissez:\n");
 }
 
 /**
@@ -42,10 +42,10 @@ void compute(int choice, double a, double b)
     switch (choice)
     {
         case 1:
-            printf("Résultat: %.2lf\n", a + b);
-            break;
+         printf("Résultat: %g\n", a + b);
+          break;
         default:
-            break;
+          break;
     }
 }
 
@@ -57,17 +57,24 @@ void compute(int choice, double a, double b)
 int main(void)
 {
     int choice;
+    double a, b;
 
     printf("=== Menu de la Calculatrice ===\n");
     while (1)
     {
-    print_menu();
-    if (scanf("%d", &choice) != 1)
-        return (1);
-    if (choice == 0)
-        break;
-    if (choice < 1 || choice > 4)
-        printf("Choix invalide. Veuillez réessayer.\n");
+        print_menu();
+        if (scanf("%d", &choice) != 1)
+          return (1);
+        if (choice == 0)
+          break;
+        if (choice < 0 || choice > 4)
+        {
+            printf("Choix invalide. Veuillez réessayer.\n");
+            continue;
+        }
+        if (!read_operands(&a, &b))
+            return (1);
+        compute(choice, a, b);
     }
     printf("Au revoir!\n");
     return 0;
