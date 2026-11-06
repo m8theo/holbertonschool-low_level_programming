@@ -23,10 +23,16 @@ int main(void)
     int choice;
 
     printf("=== Menu de la Calculatrice ===\n");
+    while (1)
+    {
     print_menu();
     if (scanf("%d", &choice) != 1)
-        return 1;
+        return (1);
     if (choice == 0)
-        printf("Au revoir!\n");
+        break;
+    if (choice < 1 || choice > 4)
+        printf("Choix invalide. Veuillez réessayer.\n");
+    }
+    printf("Au revoir!\n");
     return 0;
 }
