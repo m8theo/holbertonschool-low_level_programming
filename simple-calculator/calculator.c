@@ -24,11 +24,11 @@ int read_operands(double *a, double *b)
 {
     printf("Entrez le premier nombre: ");
     if (scanf("%lf", a) != 1)
-        return 0;
+        return (0);
     printf("Entrez le deuxième nombre: ");
     if (scanf("%lf", b) != 1)
-        return 0;
-    return 1;
+        return (0);
+    return (1);
 }
 
 /**
@@ -49,6 +49,12 @@ void compute(int choice, double a, double b)
           break;
         case 3:
          printf("Résultat: %g\n", a * b);
+          break;
+        case 4:
+         if (b == 0)
+         printf("Erreur: Division par zéro!\n");
+        else
+         printf("Résultat: %g\n", a / b);
           break;
         default:
           break;
