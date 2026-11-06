@@ -47,6 +47,9 @@ void compute(int choice, double a, double b)
         case 2:
          printf("Résultat: %g\n", a - b);
           break;
+        case 3:
+         printf("Résultat: %g\n", a * b);
+          break;
         default:
           break;
     }
