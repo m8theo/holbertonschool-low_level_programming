@@ -14,6 +14,42 @@ void print_menu(void)
 }
 
 /**
+ * read_operands - Lit deux opérandes de l'utilisateur.
+ * @a: Pointeur vers le premier opérande.
+ * @b: Pointeur vers le deuxième opérande.
+ * 
+ * Return: 1 en cas de réussite, 0 si aucun nombre n'a pu être lu
+ */
+int read_operands(double *a, double *b)
+{
+    printf("Entrez le premier nombre: ");
+    if (scanf("%lf", a) != 1)
+        return 0;
+    printf("Entrez le deuxième nombre: ");
+    if (scanf("%lf", b) != 1)
+        return 0;
+    return 1;
+}
+
+/**
+ * compute - Effectue l'opération choisie sur les deux opérandes.
+ * @choice: L'opération choisie (1 pour addition, 2 pour soustraction, 3 pour multiplication, 4 pour division).
+ * @a: Le premier opérande.
+ * @b: Le deuxième opérande.
+ */
+void compute(int choice, double a, double b)
+{
+    switch (choice)
+    {
+        case 1:
+            printf("Résultat: %.2lf\n", a + b);
+            break;
+        default:
+            break;
+    }
+}
+
+/**
  * main - Point d'entrée du programme de la calculatrice.
  * 
  * Return: 0 si le programme se termine avec succès.
