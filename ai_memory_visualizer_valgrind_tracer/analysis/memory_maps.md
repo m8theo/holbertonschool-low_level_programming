@@ -134,7 +134,7 @@ Bilan : deux pointeurs peuvent désigner le même bloc. Libérer ce bloc invalid
 | 4 | Durée de vie de `dump_frame` | Sa frame disparaît avant l'appel récursif suivant. | Correct | `dump_frame("enter", 0)` est retournée avant le début de `walk_stack(1)` ; l'espace peut être réutilisé. |
 | 5 | Comprendre `b = a` | `b` pointe vers le même tableau que `a`. | Correct | L'affectation copie l'adresse et n'alloue aucun bloc supplémentaire. |
 | 6 | Effet de `free(a)` | `b` devient un pointeur pendant. | Correct | Le tableau a été libéré ; les accès par `b` des lignes 42 à 45 ont un comportement indéfini. |
-| 7 | Étudier la fuite du tas | Le nom d'Alice fuit sur six octets. | *orrect pour le chemin normal | `person_free_partial` appelle `free(p)` sans `free(p->name)` ; la chaîne `"Alice\0"` occupe six octets. |
+| 7 | Étudier la fuite du tas | Le nom d'Alice fuit sur six octets. | Correct pour le chemin normal | `person_free_partial` appelle `free(p)` sans `free(p->name)` ; la chaîne `"Alice\0"` occupe six octets. |
 
 
 ## Conclusion
