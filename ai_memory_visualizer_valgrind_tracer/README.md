@@ -22,4 +22,3 @@ make
 
 - Binaries are built with debug symbols (`-g`) for easier analysis.
 - One program is expected to crash (`crash_example`).
-# ai_memory_visualizer_valgrind_tracer
