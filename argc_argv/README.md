@@ -13,17 +13,6 @@ Il couvre l'utilisation des arguments passés à un programme C depuis la ligne 
 - `3-mul.c` : programme qui multiplie deux nombres convertis avec `atoi` et affiche le résultat, suivi d'un retour à la ligne. S'il ne reçoit pas exactement deux arguments, il affiche `Error` et renvoie `1`.
 - `4-add.c` : programme qui additionne des nombres positifs et affiche le résultat, suivi d'un retour à la ligne. Il affiche `0` si aucun nombre n'est passé. Si un argument contient un symbole qui n'est pas un chiffre (y compris le signe `-`), il affiche `Error` et renvoie `1`.
 
-## Compilation et exécution
-
-```bash
-gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-mul.c -o mul
-./mul 2 -3
--6
-gcc -Wall -pedantic -Werror -Wextra -std=gnu89 4-add.c -o add
-./add 1 10 100 1000
-1111
-```
-
 ## Environnement
 
 - Système : Ubuntu 20.04 LTS
