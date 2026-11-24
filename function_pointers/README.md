@@ -15,14 +15,6 @@ Il couvre les pointeurs de fonctions en C : ce qu'ils sont, ce qu'ils contiennen
 - `3-get_op_func.c` : fonction `get_op_func` qui parcourt un tableau de structures `op_t` et renvoie un pointeur vers la fonction correspondant à l'opérateur `s`, ou `NULL` s'il ne fait pas partie des opérateurs `+`, `-`, `*`, `/` et `%`.
 - `3-main.c` : fonction `main` de la calculatrice, qui s'utilise sous la forme `calc num1 operator num2`. Elle convertit les nombres avec `atoi`, récupère la fonction à appeler avec `get_op_func` et affiche le résultat, suivi d'un retour à la ligne. En cas d'erreur, elle affiche `Error` et quitte avec le statut `98` si le nombre d'arguments est incorrect, `99` si l'opérateur est inconnu, et `100` en cas de division ou de modulo par `0`.
 
-## Compilation de la calculatrice
-
-```bash
-gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-main.c 3-op_functions.c 3-get_op_func.c -o calc
-./calc 1024 - 98
-926
-```
-
 ## Environnement
 
 - Système : Ubuntu 20.04 LTS
